@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T00:00:00.000Z",
+  "title": "Design System: Dibimbing Career Hub",
+  "extensions": {
+    "colorMeta": {
+      "brand-600": { "role": "primary", "displayName": "Teal Aksi", "canonical": "#007378", "tonalRamp": ["#002D34", "#00444B", "#005A63", "#007378", "#009A9E", "#7FD0D2", "#D8F5F6", "#ECFAFB"] },
+      "brand-900": { "role": "primary", "displayName": "Teal Tinta", "canonical": "#002D34", "tonalRamp": ["#002D34", "#00444B", "#005A63", "#007378", "#009A9E", "#7FD0D2", "#D8F5F6", "#ECFAFB"] },
+      "ink": { "role": "neutral", "displayName": "Tinta", "canonical": "#131C20", "tonalRamp": ["#131C20", "#2A353A", "#536067", "#7D888E", "#A9B3B8", "#CAD3D5", "#DFE6E8", "#F7FBFC"] },
+      "canvas": { "role": "neutral", "displayName": "Kanvas Teal Tipis", "canonical": "#F7FBFC", "tonalRamp": ["#131C20", "#536067", "#7D888E", "#CAD3D5", "#DFE6E8", "#EEF3F4", "#F7FBFC", "#FFFFFF"] },
+      "ok-700": { "role": "tertiary", "displayName": "Mint Berhasil", "canonical": "#126B47", "tonalRamp": ["#0B4A31", "#126B47", "#2E9468", "#6CC297", "#A5E3C3", "#D3F9E3", "#E8FCF0", "#F5FEF9"] },
+      "proc-700": { "role": "tertiary", "displayName": "Sky Berproses", "canonical": "#125F94", "tonalRamp": ["#0B4166", "#125F94", "#3C86BE", "#7BB4DE", "#B0D8F0", "#D9F3FF", "#EAF8FF", "#F6FCFF"] },
+      "warn-700": { "role": "tertiary", "displayName": "Peach Perhatian", "canonical": "#984B16", "tonalRamp": ["#6B3309", "#984B16", "#C27A45", "#E0A57A", "#F2C9A6", "#FFE9D4", "#FFF3E8", "#FFFAF5"] },
+      "learn-700": { "role": "tertiary", "displayName": "Lilac Belajar", "canonical": "#614A96", "tonalRamp": ["#43306D", "#614A96", "#8670B8", "#AD9BD6", "#CFC3EA", "#F0EAFF", "#F7F3FF", "#FBF9FF"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Sapaan beranda student, satu per layar." },
+      "page-title": { "displayName": "Page title", "purpose": "Judul halaman student." },
+      "headline": { "displayName": "Headline", "purpose": "Judul tile pahlawan student (24px); judul Sheet/EmptyState memakai 20px." },
+      "headline-workspace": { "displayName": "Headline workspace", "purpose": "Judul halaman partner/admin, Geist." },
+      "body-sm": { "displayName": "Body kecil", "purpose": "Tombol workspace, nav, chip alasan, kontrol Demo Panel (13px)." },
+      "micro": { "displayName": "Micro", "purpose": "Kbd, hitungan badge, label bottom nav, metadata kartu kanban (11px)." }
+    },
+    "shadows": [
+      { "name": "xs", "value": "0 1px 2px rgb(19 28 32 / 0.05)", "purpose": "Tile, panel, kartu kanban saat diam." },
+      { "name": "sm", "value": "0 1px 2px rgb(19 28 32 / 0.06), 0 4px 12px rgb(19 28 32 / 0.05)", "purpose": "Hover, tombol hero, bottom nav." },
+      { "name": "md", "value": "0 2px 4px rgb(19 28 32 / 0.06), 0 12px 32px rgb(19 28 32 / 0.1)", "purpose": "Toast dan FAB Demo." },
+      { "name": "lg", "value": "0 4px 8px rgb(19 28 32 / 0.08), 0 24px 64px rgb(19 28 32 / 0.16)", "purpose": "Sheet, Command Palette, Demo Panel." }
+    ],
+    "motion": [
+      { "name": "ease-out-soft", "value": "cubic-bezier(0.2, 0.8, 0.2, 1)", "purpose": "Easing masuk untuk rise, sheet, slide, stamp." },
+      { "name": "anim-rise", "value": "280ms", "purpose": "Toast, palette." },
+      { "name": "anim-sheet", "value": "280ms", "purpose": "Sheet dan Demo Panel." },
+      { "name": "anim-fade", "value": "200ms", "purpose": "Scrim overlay." },
+      { "name": "anim-stamp", "value": "420ms", "purpose": "Badge Improved." },
+      { "name": "skeleton-shimmer", "value": "1.4s linear infinite", "purpose": "Loading; statis saat reduced motion." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Aksi utama student, pill 44px.",
+      "html": "<button class=\"ds-btn-primary\">Lamar sekarang</button>",
+      "css": ".ds-btn-primary{height:44px;padding:0 18px;border-radius:9999px;background:#007378;color:#fff;font:600 15px/1 inherit;border:0;box-shadow:0 1px 2px rgb(19 28 32/.05);transition:background-color .15s,box-shadow .15s,transform .15s}.ds-btn-primary:hover{background:#005A63;box-shadow:0 1px 2px rgb(19 28 32/.06),0 4px 12px rgb(19 28 32/.05)}.ds-btn-primary:focus-visible{outline:2px solid #007378;outline-offset:2px}.ds-btn-primary:active{transform:scale(.97)}"
+    },
+    {
+      "name": "Hero Button",
+      "kind": "button",
+      "refersTo": "button-hero",
+      "description": "Satu per layar student, aksi bernilai tertinggi.",
+      "html": "<button class=\"ds-btn-hero\">Lihat rencana belajar</button>",
+      "css": ".ds-btn-hero{height:52px;padding:0 24px;border-radius:9999px;background:#002D34;color:#fff;font:600 16px/1 inherit;border:0;box-shadow:0 1px 2px rgb(19 28 32/.06),0 4px 12px rgb(19 28 32/.05);transition:background-color .15s,transform .15s}.ds-btn-hero:hover{background:#005A63}.ds-btn-hero:focus-visible{outline:2px solid #007378;outline-offset:2px}.ds-btn-hero:active{transform:scale(.97)}"
+    },
+    {
+      "name": "Workspace Button",
+      "kind": "button",
+      "refersTo": "button-workspace",
+      "description": "Tombol sm 32px radius 8 untuk workspace dan footer Sheet.",
+      "html": "<button class=\"ds-btn-ws\">Tutup lamaran</button>",
+      "css": ".ds-btn-ws{height:32px;padding:0 12px;border-radius:8px;background:#007378;color:#fff;font:600 13px/1 inherit;border:0;transition:background-color .15s,transform .15s}.ds-btn-ws:hover{background:#005A63}.ds-btn-ws:focus-visible{outline:2px solid #007378;outline-offset:2px}.ds-btn-ws:active{transform:scale(.97)}"
+    },
+    {
+      "name": "Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Input student 44px radius 12.",
+      "html": "<input class=\"ds-input\" placeholder=\"Cari lowongan\" />",
+      "css": ".ds-input{height:44px;width:240px;padding:0 14px;border:1px solid #CAD3D5;border-radius:12px;background:#fff;color:#131C20;font-size:15px;outline:none;transition:border-color .15s,box-shadow .15s}.ds-input::placeholder{color:#7D888E}.ds-input:focus{border-color:#007378;box-shadow:0 0 0 3px #D8F5F6}"
+    },
+    {
+      "name": "Tile",
+      "kind": "card",
+      "refersTo": "tile",
+      "description": "Bento tile student, radius 20.",
+      "html": "<div class=\"ds-tile\"><p class=\"ds-tile-l\">Passport</p><p class=\"ds-tile-n\">4 dari 6</p></div>",
+      "css": ".ds-tile{width:220px;padding:20px;border:1px solid #DFE6E8;border-radius:20px;background:#fff;box-shadow:0 1px 2px rgb(19 28 32/.05)}.ds-tile-l{margin:0;font-size:12px;font-weight:500;color:#536067}.ds-tile-n{margin:6px 0 0;font:700 24px/1.25 inherit;letter-spacing:-.025em;color:#131C20}"
+    },
+    {
+      "name": "Kanban Card",
+      "kind": "card",
+      "refersTo": "kanban-card",
+      "description": "Kartu kandidat di pipeline partner.",
+      "html": "<button class=\"ds-kc\"><span class=\"ds-kc-n\">Alya Putri</span><span class=\"ds-kc-j\">Data Analyst</span><span class=\"ds-kc-p\">4/6 wajib</span></button>",
+      "css": ".ds-kc{display:flex;flex-direction:column;gap:8px;width:240px;padding:12px;text-align:left;border:1px solid #DFE6E8;border-radius:12px;background:#fff;box-shadow:0 1px 2px rgb(19 28 32/.05);transition:box-shadow .15s}.ds-kc:hover{box-shadow:0 1px 2px rgb(19 28 32/.06),0 4px 12px rgb(19 28 32/.05)}.ds-kc:focus-visible{outline:2px solid #007378;outline-offset:2px}.ds-kc-n{font-size:14px;font-weight:500;color:#131C20}.ds-kc-j{font-size:12px;color:#536067}.ds-kc-p{align-self:flex-start;height:24px;padding:0 10px;display:inline-flex;align-items:center;border-radius:9999px;background:#FAFDFD;border:1px solid #DFE6E8;font-size:12px;font-weight:500;color:#536067}"
+    },
+    {
+      "name": "Reason Tag Chip",
+      "kind": "chip",
+      "refersTo": "tag-chip",
+      "description": "Chip alasan di CloseDialog; terpilih = brand-50.",
+      "html": "<button class=\"ds-tag\">Visualisasi data</button> <button class=\"ds-tag ds-tag-on\" aria-pressed=\"true\">SQL</button>",
+      "css": ".ds-tag{height:32px;padding:0 12px;border:1px solid #CAD3D5;border-radius:8px;background:#fff;color:#131C20;font:500 13px/1 inherit;transition:background-color .15s}.ds-tag:hover{background:#F7FBFC}.ds-tag:focus-visible{outline:2px solid #007378;outline-offset:2px}.ds-tag-on{border-color:#007378;background:#ECFAFB;color:#005A63}"
+    },
+    {
+      "name": "Status Pill",
+      "kind": "chip",
+      "refersTo": "pill-ok",
+      "description": "Pill status bertint dengan titik 6px dan teks.",
+      "html": "<span class=\"ds-pill\"><i></i>Diterima</span>",
+      "css": ".ds-pill{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:9999px;background:#D3F9E3;color:#126B47;font-size:12px;font-weight:500;white-space:nowrap}.ds-pill i{width:6px;height:6px;border-radius:9999px;background:currentColor}"
+    },
+    {
+      "name": "Skill Level Meter",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "4 kapsul + label teks + angka.",
+      "html": "<span class=\"ds-meter\"><span class=\"ds-seg on\"></span><span class=\"ds-seg on\"></span><span class=\"ds-seg\"></span><span class=\"ds-seg\"></span><b>Menengah <em>2/4</em></b></span>",
+      "css": ".ds-meter{display:inline-flex;align-items:center;gap:8px}.ds-seg{display:inline-block;width:24px;height:8px;margin-right:3px;border-radius:9999px;background:#DFE6E8}.ds-seg.on{background:#009A9E}.ds-meter b{font-size:13px;font-weight:500;color:#131C20}.ds-meter em{margin-left:4px;font-style:normal;color:#536067}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Pendamping Belajar",
+    "overview": "Satu sistem, dua kepadatan, berbagi token Tailwind v4 dan satu hue teal. Soft (student, mobile-first): Tile putih membulat 20px di atas kanvas teal tipis, satu tile pahlawan per layar, Bricolage Grotesque untuk suara personal, detail di dalam Sheet. Calm (partner dan admin, desktop-first): sidebar terang 56/232px, top bar 48px dengan pencarian Ctrl K, border hairline, kontrol 32-36px, detail kandidat sebagai Sheet samping 520px.",
+    "keyCharacteristics": [
+      "Kanvas canvas, permukaan surface, kedalaman dari border line 1px plus bayangan xs.",
+      "Teal satu-satunya warna aksi. Lima tint semantik hanya untuk makna.",
+      "Sudut besar di student (tile 20, pill penuh), sudut kecil di workspace (8-12).",
+      "Seluruh body memakai tabular-nums. Setiap status disertai teks.",
+      "Gerak pendek dan informatif; semua animasi diredam oleh prefers-reduced-motion."
+    ],
+    "rules": [
+      { "name": "Aturan Satu Warna Aksi", "body": "Hanya teal yang bisa diklik. Tint pastel tidak pernah menjadi tombol.", "section": "colors" },
+      { "name": "Aturan Tint Bermakna", "body": "ok = berhasil, proc = berproses, warn = perlu perhatian, learn = belajar. Tint tidak dipakai agar \"ramai\".", "section": "colors" },
+      { "name": "Aturan Tanpa Merah untuk Student", "body": "SLA lewat menjadi \"Belum ada respons\" bertone muted; penolakan memakai learn atau proc. Merah di sisi student hanya untuk error input.", "section": "colors" },
+      { "name": "Aturan Hitungan, Bukan Persen", "body": "Match selalu \"4 dari 6 skill wajib terpenuhi\" atau \"4/6 wajib\".", "section": "typography" },
+      { "name": "Aturan Display untuk Manusia", "body": "Bricolage untuk momen student dan judul overlay; tabel, tombol, dan judul halaman workspace tetap Geist.", "section": "typography" },
+      { "name": "Aturan Bayangan Bertingkat", "body": "Elevasi naik satu tingkat per interaksi (xs ke sm saat hover). Tidak melompat dari xs ke lg.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do memakai teal sebagai satu-satunya warna aksi, dan tint sesuai maknanya (ok/proc/warn/learn).",
+      "Do memberi satu tile pahlawan dan satu tombol hero per layar student.",
+      "Do menaruh detail di Sheet; gunakan Sheet untuk semua modal agar fokus, Esc, dan safe-area konsisten.",
+      "Do memakai tinggi 32px / radius 8px untuk kontrol workspace, dan 44px / pill untuk student.",
+      "Do menyertai setiap indikator warna dengan teks, dan menjaga target sentuh mobile >= 44px.",
+      "Do mendesain empty, loading, dan offline setara state normal.",
+      "Do menandai semua data mock sebagai sintetis."
+    ],
+    "donts": [
+      "Don't kembali ke tampilan dibimbing.id lama (hero teal gelap penuh, blok highlight, oranye, Plus Jakarta Sans).",
+      "Don't memakai brand-500 atau subtle untuk teks isi.",
+      "Don't menampilkan persentase match.",
+      "Don't memakai merah, emoji sedih, atau kata \"gagal/ditolak\" di layar student.",
+      "Don't memakai glassmorphism, gradient blob, atau gradient teks; blur hanya untuk scrim Sheet.",
+      "Don't memakai Bricolage di tabel, tombol, atau judul halaman workspace.",
+      "Don't membuat Demo Panel meniru gaya produk."
+    ]
+  }
+}

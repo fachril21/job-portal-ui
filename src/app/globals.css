@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-geist-sans), system-ui, sans-serif;
+
+  --color-brand-900: #002d34;
+  --color-brand-700: #005a63;
+  --color-brand-600: #007378;
+  --color-brand-500: #009a9e;
+  --color-brand-100: #d8f5f6;
+  --color-brand-50: #ecfafb;
+
+  --color-ink: #131c20;
+  --color-muted: #536067;
+  --color-subtle: #7d888e;
+  --color-line: #dfe6e8;
+  --color-line-strong: #cad3d5;
+  --color-canvas: #f7fbfc;
+  --color-surface: #ffffff;
+
+  --color-ok-100: #d3f9e3;
+  --color-ok-700: #126b47;
+  --color-proc-100: #d9f3ff;
+  --color-proc-700: #125f94;
+  --color-warn-100: #ffe9d4;
+  --color-warn-700: #984b16;
+  --color-learn-100: #f0eaff;
+  --color-learn-700: #614a96;
+  --color-due-700: #945a00;
+  --color-danger-700: #b02a2d;
+  --color-danger-50: #fff0ee;
+
+  --radius-tile: 20px;
+  --radius-sheet: 28px;
+  --radius-panel: 12px;
+
+  --shadow-xs: 0 1px 2px rgb(19 28 32 / 0.05);
+  --shadow-sm: 0 1px 2px rgb(19 28 32 / 0.06), 0 4px 12px rgb(19 28 32 / 0.05);
+  --shadow-md: 0 2px 4px rgb(19 28 32 / 0.06), 0 12px 32px rgb(19 28 32 / 0.1);
+  --shadow-lg: 0 4px 8px rgb(19 28 32 / 0.08), 0 24px 64px rgb(19 28 32 / 0.16);
+
+  --ease-out-soft: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  background: var(--color-canvas);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 { text-wrap: balance; }
+p { text-wrap: pretty; }
+
+::selection { background: var(--color-brand-100); color: var(--color-brand-900); }
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-600);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+a { text-underline-offset: 3px; }
+
+* { scrollbar-width: thin; scrollbar-color: var(--color-line-strong) transparent; }
+input, textarea, select { caret-color: var(--color-brand-600); }
+::placeholder { color: var(--color-subtle); }
+
+.scroll-hide { scrollbar-width: none; }
+.scroll-hide::-webkit-scrollbar { display: none; }
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes sheet-up {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@keyframes slide-left {
+  from { transform: translateX(24px); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes stamp {
+  0% { transform: scale(2.2) rotate(-8deg); opacity: 0; }
+  60% { transform: scale(0.94) rotate(2deg); opacity: 1; }
+  100% { transform: scale(1) rotate(0); opacity: 1; }
+}
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgb(0 115 120 / 0.35); }
+  100% { box-shadow: 0 0 0 10px rgb(0 115 120 / 0); }
+}
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+@keyframes confetti {
+  0% { transform: translate(0, 0) rotate(0); opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)); opacity: 0; }
+}
+
+.anim-rise { animation: rise-in 280ms var(--ease-out-soft) both; }
+.anim-sheet { animation: sheet-up 280ms var(--ease-out-soft) both; }
+.anim-slide { animation: slide-left 280ms var(--ease-out-soft) both; }
+.anim-fade { animation: fade-in 200ms ease-out both; }
+.anim-stamp { animation: stamp 420ms var(--ease-out-soft) both; }
+.anim-pulse-ring { animation: pulse-ring 1.8s ease-out infinite; }
+.skeleton {
+  background: linear-gradient(90deg, var(--color-line) 25%, #eef3f4 50%, var(--color-line) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s linear infinite;
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .skeleton { animation: none; background: var(--color-line); }
+}
